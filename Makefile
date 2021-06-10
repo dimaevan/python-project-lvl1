@@ -12,3 +12,5 @@ package-install:
 	python -m pip install --user dist/*.whl --force-reinstall
 lint:
 	poetry run flake8 brain_games
+calc:
+	poetry run brain-calc

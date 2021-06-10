@@ -6,3 +6,5 @@
 Asciinema 🎞️ brain-even [link](https://asciinema.org/a/vt42oG4lzaH2XVUWUjGSOGQyh)
 
 Asciinema 🎞️ brain-calc  [link](https://asciinema.org/a/IYEXO7X5nSnHZA9AOXT8Yac4k)
+
+Asciinema 🎞️ brain-gcd  [link](https://asciinema.org/a/iErjRrWJHrM5LzfpNM9Nyp4xB)

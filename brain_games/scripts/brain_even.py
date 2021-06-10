@@ -39,9 +39,9 @@ def is_even(num):
 
 def main():
     print("Welcome to the Brain Games!")
-    x = welcome_user()
-    print('Hello, {0}'.format(x))
-    print(even(x))
+    user = welcome_user()
+    print('Hello, {0}'.format(user))
+    print(even(user))
 
 
 if __name__ == '__main__':

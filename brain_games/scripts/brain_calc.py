@@ -29,13 +29,13 @@ def calc(user):
 
 def main():
     print("Welcome to the Brain Games!")
-    x = welcome_user()
-    print('Hello, {}'.format(x))
+    user = welcome_user()
+    print('Hello, {}'.format(user))
     right_answers = 0
     while right_answers < 3:
-        if calc(x):
+        if calc(user):
             right_answers += 1
-    print('Congratulations, {}!'.format(x))
+    print('Congratulations, {}!'.format(user))
 
 
 if __name__ == '__main__':

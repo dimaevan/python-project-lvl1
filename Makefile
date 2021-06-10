@@ -14,3 +14,5 @@ lint:
 	poetry run flake8 brain_games
 calc:
 	poetry run brain-calc
+gcd:
+	poetry run brain-gcd

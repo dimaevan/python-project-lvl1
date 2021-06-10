@@ -11,3 +11,4 @@ Asciinema 🎞️ brain-gcd  [link](https://asciinema.org/a/iErjRrWJHrM5LzfpNM9N
 
 Asciinema 🎞️ brain-progression  [link](https://asciinema.org/a/ommrhUxwKZdF7C5Run4qd7VLM)
 
+Asciinema 🎞️ brain-prime  [link](https://asciinema.org/a/ziBGSUDS2GpjYuuzINwn59c3I)

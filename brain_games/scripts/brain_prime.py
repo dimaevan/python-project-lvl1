@@ -18,7 +18,7 @@ def rand_numb():
     answer = prompt.string('Your answer: ')
     result = is_simple(x)
     if answer == result:
-        return ['True', ]
+        return ['True', answer, ]
     else:
         return ['False', answer, result]
 

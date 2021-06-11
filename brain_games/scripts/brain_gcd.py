@@ -29,7 +29,7 @@ def gcd():
     result = int(nod(var_1, var_2))
     answer = prompt.integer('Your answer: ')
     if result == answer:
-        return ['True', ]
+        return ['True', answer, ]
     else:
         return ['False', answer, result]
 

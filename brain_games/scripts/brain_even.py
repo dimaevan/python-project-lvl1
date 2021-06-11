@@ -17,14 +17,14 @@ def even():
     answer = prompt.string('Your answer: ')
     if is_even(number):
         if answer == 'yes':
-            return ['True', ]
+            return ['True', answer, ]
         else:
-            return ['False', 'yes', 'no']
+            return ['False', answer, 'yes']
     else:
         if answer == 'yes':
             return ['False', 'yes', 'no']
         else:
-            return ['True', ]
+            return ['True', answer, ]
 
 
 def main():

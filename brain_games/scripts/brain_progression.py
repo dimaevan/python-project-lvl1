@@ -27,7 +27,7 @@ def delete_and_answer():
     print()
     answer = prompt.integer('Your answer: ')
     if answer == result:
-        return ['True', ]
+        return ['True', answer, ]
     else:
         return ['False', answer, result]
 

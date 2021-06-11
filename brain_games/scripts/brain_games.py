@@ -21,7 +21,7 @@ def flow(func, greeting, user):
             print("'{0}' is wrong answer ;(. "
                   "Correct answer was '{1}'.".format(this_func[1],
                                                      this_func[2]))
-    print('Congratulations, {0}'.format(user))
+    print('Congratulations, {0}!'.format(user))
 
 
 if __name__ == '__main__':

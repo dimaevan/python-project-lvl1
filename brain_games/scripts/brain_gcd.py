@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from brain_games.scripts.brain_games import flow, main as main_
+from brain_games.scripts.brain_games import flow, format_answer, main as main_
 
 
 def divider(num):
@@ -29,9 +29,9 @@ def gcd():
     result = int(nod(var_1, var_2))
     answer = prompt.integer('Your answer: ')
     if result == answer:
-        return ['True', answer, ]
+        return ['True', ]
     else:
-        return ['False', answer, result]
+        return ['False', format_answer(answer), format_answer(result)]
 
 
 def main():

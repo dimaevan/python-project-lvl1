@@ -9,6 +9,10 @@ def main():
     return user_name
 
 
+def format_answer(something):
+    return str(something).join(["'", "'"])
+
+
 def flow(func, greeting, user):
     print(greeting)
     numbers_of_correct_answer = 0
@@ -18,9 +22,9 @@ def flow(func, greeting, user):
             print('Correct!')
             numbers_of_correct_answer += 1
         elif this_func[0] == 'False':
-            print('"{0}" is wrong answer ;(. '
-                  'Correct answer was "{1}".'.format(this_func[1],
-                                                     this_func[2]))
+            print('{0} is wrong answer ;(. '
+                  'Correct answer was {1}.'.format(this_func[1],
+                                                   this_func[2]))
             print("Let's try again, {0}!".format(user))
             break
     if numbers_of_correct_answer == 3:

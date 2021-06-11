@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from brain_games.scripts.brain_games import flow, main as main_
+from brain_games.scripts.brain_games import flow, main as main_, format_answer
 
 
 def is_simple(num):
@@ -18,9 +18,9 @@ def rand_numb():
     answer = prompt.string('Your answer: ')
     result = is_simple(x)
     if answer == result:
-        return ['True', answer, ]
+        return ['True', ]
     else:
-        return ['False', answer, result]
+        return ['False', format_answer(answer), format_answer(result)]
 
 
 def main():

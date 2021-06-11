@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from brain_games.scripts.brain_games import flow, main as main_
+from brain_games.scripts.brain_games import flow, main as main_, format_answer
 
 
 def make_progression():
@@ -27,9 +27,9 @@ def delete_and_answer():
     print()
     answer = prompt.integer('Your answer: ')
     if answer == result:
-        return ['True', answer, ]
+        return ['True', ]
     else:
-        return ['False', answer, result]
+        return ['False', format_answer(answer), format_answer(result), ]
 
 
 def main():

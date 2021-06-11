@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-from . import cli
+from brain_games.scripts.cli import welcome_user
 
 
 def main():
     print("Welcome to the Brain Games!")
-    user_name = cli.welcome_user()
+    user_name = welcome_user()
     print('Hello, {0}'.format(user_name))
     return user_name
 

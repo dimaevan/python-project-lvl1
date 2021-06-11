@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from . import brain_games
+from brain_games.scripts.brain_games import flow, main as main_
 
 
 def is_simple(num):
@@ -24,9 +24,9 @@ def rand_numb():
 
 
 def main():
-    user = brain_games.main()
+    user = main_()
     greetings = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    brain_games.flow(rand_numb, greetings, user)
+    flow(rand_numb, greetings, user)
 
 
 if __name__ == '__main__':

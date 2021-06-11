@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from . import brain_games
+from brain_games.scripts.brain_games import flow, main as main_
 
 
 def make_progression():
@@ -33,9 +33,9 @@ def delete_and_answer():
 
 
 def main():
-    user = brain_games.main()
+    user = main_()
     greetings = 'What number is missing in the progression?'
-    brain_games.flow(delete_and_answer, greetings, user)
+    flow(delete_and_answer, greetings, user)
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from . import brain_games
+from brain_games.scripts.brain_games import flow, main as main_
 
 
 def divider(num):
@@ -35,9 +35,9 @@ def gcd():
 
 
 def main():
-    user = brain_games.main()
+    user = main_()
     greeting = 'Find the greatest common divisor of given numbers.'
-    brain_games.flow(gcd, greeting, user)
+    flow(gcd, greeting, user)
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from . import brain_games
+from brain_games.scripts.brain_games import flow, main as main_
 
 
 def calc():
@@ -22,8 +22,8 @@ def calc():
 
 
 def main():
-    user = brain_games.main()
-    brain_games.flow(calc, 'What is the result of the expression?', user)
+    user = main_()
+    flow(calc, 'What is the result of the expression?', user)
 
 
 if __name__ == '__main__':

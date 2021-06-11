@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from . import brain_games
+from brain_games.scripts.brain_games import main as main_, flow
 
 
 def is_even(num):
@@ -28,9 +28,9 @@ def even():
 
 
 def main():
-    user = brain_games.main()
+    user = main_()
     greetings = 'Answer "yes" if the number is even, otherwise answer "no".'
-    brain_games.flow(even, greetings, user)
+    flow(even, greetings, user)
 
 
 if __name__ == '__main__':

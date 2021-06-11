@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-from brain_games.scripts.cli import welcome_user
 import random
 import prompt
+from . import brain_games
 
 
 def is_simple(num):
@@ -12,31 +12,21 @@ def is_simple(num):
         return 'yes'
 
 
-def rand_numb(user_name):
+def rand_numb():
     x = random.randint(1, 100)
     print('Question: {0}'.format(x))
     answer = prompt.string('Your answer: ')
-    if answer == is_simple(x):
-        print('Correct')
-        return True
+    result = is_simple(x)
+    if answer == result:
+        return ['True', ]
     else:
-        print('{0} is wrong answer ;(. '
-              'Correct answer was {1}.'.format(answer, is_simple(x)))
-        print("Let's try again, {0}!".format(user_name))
-        return False
+        return ['False', answer, result]
 
 
 def main():
-    print("Welcome to the Brain Games!")
-    user = welcome_user()
-    print('Hello, {}'.format(user))
-    right_answers = 0
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    while right_answers < 3:
-        pass
-        if rand_numb(user):
-            right_answers += 1
-    print('Congratulations, {}!'.format(user))
+    user = brain_games.main()
+    greetings = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    brain_games.flow(rand_numb, greetings, user)
 
 
 if __name__ == '__main__':

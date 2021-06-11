@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-from brain_games.scripts.cli import welcome_user
 import random
 import prompt
+from . import brain_games
 
 
 def make_progression():
@@ -15,40 +15,27 @@ def make_progression():
     return my_progression
 
 
-def delete_and_answer(user):
-    user_name = user
+def delete_and_answer():
     arithmetic_progress = make_progression()
     i = random.choice(arithmetic_progress)
     index_hidden = arithmetic_progress.index(i)
-    right_answer = arithmetic_progress[index_hidden]
+    result = arithmetic_progress[index_hidden]
     arithmetic_progress[index_hidden] = '..'
     print('Question: ', end='')
     for x in arithmetic_progress:
         print(x, end=' ')
     print()
     answer = prompt.integer('Your answer: ')
-    if answer == right_answer:
-        print('Correct!')
-        return True
+    if answer == result:
+        return ['True', ]
     else:
-        print('{0} is wrong answer ;(. '
-              'Correct answer was {1}.'.format(answer, right_answer))
-        print("Let's try again, {0}!".format(user_name))
-        return False
+        return ['False', answer, result]
 
 
 def main():
-    print("Welcome to the Brain Games!")
-    user = welcome_user()
-    print('Hello, {}'.format(user))
-    right_answers = 0
-    print('What number is missing in the progression?')
-    while right_answers < 3:
-        pass
-        if delete_and_answer(user):
-            right_answers += 1
-
-    print('Congratulations, {}!'.format(user))
+    user = brain_games.main()
+    greetings = 'What number is missing in the progression?'
+    brain_games.flow(delete_and_answer, greetings, user)
 
 
 if __name__ == '__main__':

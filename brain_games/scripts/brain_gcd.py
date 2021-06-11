@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 import prompt
-from brain_games.scripts.cli import welcome_user
+from . import brain_games
 
 
 def divider(num):
@@ -22,34 +22,22 @@ def nod(first_num, second_num):
         return max(nod_of_sets)
 
 
-def gcd(user_name):
-    user = user_name
+def gcd():
     var_1 = random.randint(0, 100)
     var_2 = random.randint(0, 100)
     print('Question: {0} {1}'.format(var_1, var_2))
-    this_nod = int(nod(var_1, var_2))
+    result = int(nod(var_1, var_2))
     answer = prompt.integer('Your answer: ')
-    if this_nod == answer:
-        print('Correct!')
-        return True
+    if result == answer:
+        return ['True', ]
     else:
-        print('{0} is wrong answer ;(. '
-              'Correct answer was {1}.'.format(answer, this_nod))
-        print("Let's try again, {0}!".format(user))
-        return False
+        return ['False', answer, result]
 
 
 def main():
-    print("Welcome to the Brain Games!")
-    user = welcome_user()
-    print('Hello, {0}'.format(user))
-    print('Find the greatest common divisor of given numbers.')
-    gcd(user)
-    right_answers = 0
-    while right_answers < 3:
-        if gcd(user):
-            right_answers += 1
-    print('Congratulations, {}!'.format(user))
+    user = brain_games.main()
+    greeting = 'Find the greatest common divisor of given numbers.'
+    brain_games.flow(gcd, greeting, user)
 
 
 if __name__ == '__main__':

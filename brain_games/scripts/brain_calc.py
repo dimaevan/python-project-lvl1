@@ -5,9 +5,9 @@ from brain_games.scripts.brain_games import flow, main as main_, format_answer
 
 
 def calc():
-    var_1, var_2 = random.randint(0, 100), random.randint(0, 100)
+    var_1, var_2 = random.randint(0, 20), random.randint(0, 20)
     operation = random.choice(['+', '-', '*'])
-    print('Question: ', var_1, operation, var_2)
+    print('Question:', var_1, operation, var_2)
     if operation == '+':
         result = var_1 + var_2
     elif operation == '-':

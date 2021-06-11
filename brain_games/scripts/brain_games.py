@@ -18,10 +18,13 @@ def flow(func, greeting, user):
             print('Correct!')
             numbers_of_correct_answer += 1
         elif this_func[0] == 'False':
-            print("'{0}' is wrong answer ;(. "
-                  "Correct answer was '{1}'.".format(this_func[1],
+            print('"{0}" is wrong answer ;(. '
+                  'Correct answer was "{1}".'.format(this_func[1],
                                                      this_func[2]))
-    print('Congratulations, {0}!'.format(user))
+            print("Let's try again, {0}!".format(user))
+            break
+    if numbers_of_correct_answer == 3:
+        print('Congratulations, {0}!'.format(user))
 
 
 if __name__ == '__main__':
